@@ -1,7 +1,6 @@
-from asyncio.windows_events import NULL
-from pickle import TRUE
+
 from django.db import models
-from operator import truediv 
+
 
 # Create your models here.
 
