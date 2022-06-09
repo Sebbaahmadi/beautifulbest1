@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Oswald"
+}
+
+
+body {
+  font-family: "Open Sans";
+}
+
+.forms-section {
+
+
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.forms-section {
+  padding-bottom: 500px;
+  background-color: rgba(255, 250, 250, 0.788);
+  height: fit-content;
+}
+
+.w3-image{
+  padding: 30px;
+  /* border-radius: 30px; */
+  
+    opacity: 0.8;
+    border-radius: 30px;
+}
+
+.art{
+  padding:30px;
+}
+
+h1{
+  color:snow;
+  text-shadow:5px 10px 8px rgb(14, 95, 122);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+</style>
+
+
+</head>
+
+<body class="w3-light-grey">
+  <section class="forms-section">
+
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide" id="home">
+    <img class="w3-image" src="{% static 'image/sport7.jpg' %}" alt="Fashion Blog" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <article class="art">
+      <h1 class="w3-text-white">  Beautiful Best</h1>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>CLASS TIME</b> <br></h1>
+      <div  class="wrap">
+        <h1 id="greetings"></h1>
+        <br>
+        <h1 id="clock"></h1>
+        <!-- <p id="demo1"></p> -->
+        
+
+        <script src="{% static 'js/clock.js' %}"></script>
+
+        
+        
+        </div>
+        
+
+      </article>
+    </div>
+</header>
+
+{% for post in object_list %} 
+
+<!-- Grid -->
+<div class="w3-row w3-padding w3-border">
+
+    <!-- Blog entries -->
+    <div class="w3-col l8 s12">
+        <!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h3>{{ post.title }}</h3>
+          <h5>  <span class="w3-opacity"> {{ post.date }} </span></h5>
+        </div>
+
+        <div class="w3-justify" >
+    <img src="{{ post.cover.url }}" alt="{{ post.title }}" style="width:80%" class="w3-padding-16">
+          <p><strong> </strong> {{ post.text }} </p>
+
+          <p class="w3-clear">  </p>
+
+          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+            <hr>
+              <div class="w3-col l2 m3">
+                <img src="" style="width:90px;">
+              </div> 
+
+              <div class="w3-col l10 m9">
+                <h4> <span class="w3-opacity w3-medium"> {{ post.date }} </span></h4>
+              </div>
+          </div>
+              </div>
+            </div>
+          </div>
+
+          
+       
+      {% endfor %}
+
+   
+<!-- aside section -->
+      <!-- we took the code from here-> https://www.w3schools.com/w3css/tryw3css_templates_fashion_blog.htm -->
+
+
+       <!-- About/Information menu -->
+       <aside class="as">
+        <div class="w3-col l4">
+          <!-- Inspiration -->
+          <div class="w3-white w3-margin" id="photo">
+            <div class="w3-container w3-padding w3-black">
+              <h4>Activities</h4>
+            </div>
+            <div class="w3-row-padding w3-white">
+              <div class="w3-col s6">
+                <p><img src="{% static 'image/train5.jpg' %}" alt="Jeans" style="width:100%"></p>
+                <p><img src="{% static 'image/train8.jpg' %}" alt="Jeans" style="width:100%"></p>
+              </div>
+              <div class="w3-col s6">
+                <p><img src="{% static 'image/train6.jpg' %}" alt="Men in Hats" style="width:100%" class="w3-grayscale"></p>
+                <p><img src="{% static 'image/train7.jpg' %}" alt="Jeans" style="width:100%"></p>
+             </div>
+            </div>
+          </div>
+        
+          <br>
+          <!-- Inspiration -->
+          <div class="w3-white w3-margin" id="photo">
+            <div class="w3-container w3-padding w3-black">
+              <h4>Personal Training</h4>
+            </div>
+            <div class="w3-row-padding w3-white">
+              <div class="w3-col s6">
+                <p><img src="{% static 'image/train1.jpg' %}" alt="Jeans" style="width:100%"></p>
+                <p><img src="{% static 'image/train2.jpg' %}" alt="Jeans" style="width:100%"></p>
+              </div>
+              <div class="w3-col s6">
+                <p><img src="{% static 'image/train3.jpg' %}" alt="Men in Hats" style="width:100%" class="w3-grayscale"></p>
+                <p><img src="{% static 'image/train4.jpg' %}" alt="Jeans" style="width:100%"></p>
+             </div>
+            </div>
+          <!-- END Inspiration -->
+        </div>
+        
+        </div>
+        </aside>
+    
+</div>
+
+</section>
+</body>
+</html>
+
+
+
+{% endblock %}
+
+
+
+<!-- {{ MEDIA_URL }}{{ x.image.url }} -->
+<!-- class="w3-card-4 w3-margin w3-white" -->

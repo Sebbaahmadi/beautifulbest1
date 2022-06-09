@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Contact Us </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {
+  font-family: "Times New Roman", Georgia, Serif;
+}
+h1, h2, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+
+.forms-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.forms-section{
+background-color: rgba(255, 250, 250, 0.788);
+height: fit-content;
+
+}
+
+
+
+.img{
+padding:10px;
+padding-top: 10px;
+margin-top: 80px;
+box-shadow: 10px 10px 5px rgb(14, 95, 122);
+border-radius: 50px;
+}
+
+.col-auto {
+  /* background-color: rgb(255, 255, 255); */
+  width: 200px;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  /* border: 3px solid rgb(255, 255, 255); */
+  color: rgb(20, 32, 85);
+  cursor: pointer;
+  text-align: center -50px;
+}
+/*
+img {
+   padding-top: 100px;
+  width: 650;
+  height: 600; */
+  /* border-radius: 50px;
+  box-shadow: ; 
+}*/
+
+.form form-control{
+  border-radius: 1rem;
+}
+h1{
+	font-family: "Playfair Display";
+	color: rgb(102, 74, 52);
+    letter-spacing: 3px;
+  font-size: 4rem;
+  font-weight: 400;
+  text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+    0 0 0.125em hsla(320, 100%, 60%, 0.5),
+    -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.125),
+    0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.25);
+}
+h3{
+  letter-spacing: 1px;
+  color: rgba(0, 16, 58, 0.884);
+  text-shadow: 0.25em 0.125em 0.125em hsla(214, 100%, 60%, 0.329);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+</style>
+</head>
+
+<body>
+
+<section class="forms-section">
+<!-- i take the HTML structure from here https://www.w3schools.com/w3css/w3css_templates.asp -->
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="{% static 'image/open-cut.jpg' %}" class="img">
+  </div>
+    <div class="w3-col m6 w3-padding-large">
+    <h1 class="w3-center">Contact us</h1><br>
+    <h3>We will be more than happy to serve you</h3><br>
+    <form class="form" >
+      <!-- <div class="form-group"> -->
+          <label for="exampleFormControlInput1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">First Name</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First name...">
+        <!-- </div> -->
+        <!-- <div class="form-group"> -->
+          <label for="exampleFormControlInput1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Last Name</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Last Name...">
+        <!-- </div>      -->
+    <!-- <div class="form-group"> -->
+      <label for="exampleFormControlInput1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Email Address</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <!-- </div> -->
+    <!-- <div class="form-group"> -->
+      <label for="exampleFormControlSelect1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Do you have one of these problems?</label>
+      <select class="form-control" id="exampleFormControlSelect1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        <option>suggestions</option>
+        <option>complaints</option>
+        <option>cann't log in to your account</option>
+        <option>other</option>
+      </select>
+  <!-- </div> -->
+      <!-- <div class="form-group"> -->
+          <label for="exampleFormControlTextarea1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Write Your Problem</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Other problems"></textarea>
+        <!-- </div> -->
+        <div class="col-auto">
+          <button type="submit" class="btn btn-light mt-3">Submit</button>
+    <!-- </div> -->
+  </form>
+  </div>
+</div>
+</div>
+
+<!-- Google Map -->
+<script src="{% static 'js/google-map.js' %}"></script>
+<script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB7V-mAjEzzmP6PCQda8To0ZW_o3UOCVCE&callback=initMap' %}" async defer></script>
+
+<script>
+$(document).ready(function(){
+$(window).resize(function(){
+  var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+  if (width >= '768') { 
+    var footerHeight = $('#footer').outerHeight();
+    $('#container').css({'marginBottom': footerHeight + 'px'});
+} else {
+    $('#container').css({'marginBottom': '0px'});
+}
+});
+$(window).resize();
+});
+</script>
+
+<script type="text/javascript" src="{% static 'js/validator.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/form-scripts.js' %}"></script>
+
+</div>
+
+</section>
+</body></html>
+
+
+
+
+{% endblock %}

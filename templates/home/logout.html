@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Logout{% endblock title %}
+{% block content %}
+
+<head> 
+
+<style>
+        *,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+    .forms-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.forms-section{
+ padding-top: 50px;
+ padding-bottom: 100px;   
+background-color: rgba(255, 250, 250, 0.788);
+height: fit-content;
+
+}
+
+h4{
+    text-align: center;
+}
+
+
+.contan{
+    align-items: center;
+}
+h1{
+	color: rgb(104, 78, 59);
+  font-family: "Playfair Display";
+  letter-spacing: 3px;
+  text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+    0 0 0.125em hsla(320, 100%, 60%, 0.5),
+    -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.125),
+    0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.25);
+} 
+
+#photo{
+padding:5px;
+box-shadow: 10px 10px 5px rgb(122, 14, 90);
+
+border-radius: 50px;
+}
+
+
+
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+
+<section class="forms-section">
+
+    <div class="w3-row w3-padding-64" id="about">
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+         <img id="photo" src="{% static 'image/logout.jpg' %}" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+        </div>
+    
+        <div class="w3-col m6 w3-padding-large">
+          <h1 class="w3-center">You have been logged out</h1><br>
+          <h4 class="w3-large">Thanks for your time, contact us for any comments or suggestions
+            using our social media account, or via contact us form.</h4>
+            <br>
+            <h4  class="btn btn-primary"><a href="{% url 'home:login' %}">Log in again</a></h4>
+    
+        
+        </div>
+      </div>
+  
+        
+</section>
+
+{% endblock content %}
+
+<section id="container" class="zerogrid">
+<div class="wrap-container">
+<article class="archive-post" >
+    <div class="row wrap-post"><!--Start Post-->
+        <div class="flex-box">
+            <div class="col-1-2">
+                <div class="box-image"></div>
+            </div>
+            <div class="col-1-2">
+                <div class="box-text">
+                    <div class="heading">
+                        <h2>You have been logged out</h2>
+                    </div>
+                    <div class="content">
+                        <p>Thanks for your time, contact me for any comments or suggestions
+                             using my email address.ctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia.</p>
+                             <br><a href="{% url 'home:login' %}" class="btn btn-primary">Log in again</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</div>
+</section>
+
+
+
+
+
+<!-- 
+
+
+
+
+ -->
+
+
+
+ <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="/w3images/tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">You have been logged out</h1><br>
+      <p class="w3-large">Thanks for your time, contact me for any comments or suggestions
+        using my email address.ctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia</p>
+        <br>
+        <a href="{% url 'home:login' %}" class="btn btn-primary">Log in again</a>
+
+    
+    </div>
+  </div>
+
+  <!-- 
+
+
+   -->
+
+   <h2> You have been logged out !! </h2>
+    
+   <div class="contan">
+   
+         <h3 class="w3-large"> 
+           Thanks for your time, contact me for any comments or suggestions
+           using my email address.ctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia </h3>
+         
+         <h5 class="btn btn-primary"><a href="{% url 'home:login' %}">Log in again</a> <h5>
+
+   </div>     
+     

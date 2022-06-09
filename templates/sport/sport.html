@@ -1,0 +1,263 @@
+{% extends 'base.html' %}
+{% load static %} 
+{% block content %}
+
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+
+    
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.forms-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.forms-section{
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+ background-color: rgba(255, 250, 250, 0.788);
+ height: fit-content;
+
+}
+
+
+body {font-family:"Playfair Display";}
+
+
+
+#pictu{
+padding:5px;
+box-shadow: 10px 10px 5px rgb(14, 95, 122);
+
+border-radius: 50px;
+}
+#paragraphleft{
+  padding-left: 20px;
+}
+
+h2,h1{
+	color: rgb(104, 78, 59);
+  font-family: "Playfair Display";
+  letter-spacing: 3px;
+  text-shadow: 0 0 1em hsla(320, 100%, 50%, 0.5),
+    0 0 0.125em hsla(320, 100%, 60%, 0.5),
+    -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.125),
+    0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.25);
+} 
+h1{
+color:rgb(82, 61, 46) ;
+}
+
+p{
+  color: black;
+}
+</style>
+  
+</head>
+
+
+
+<body>
+    <section class="forms-section">
+
+
+      <!--  -->
+      
+<h1>OUR CALSSES</h1>
+
+<!-- sport1 -->
+<div class="w3-content" style="max-width:1100px">
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="{% static 'image/sport3.jpg' %}" class="w3-round w3-image w3-opacity-min" id="pictu" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h2 class="w3-center">STRONG NATION</h2><br>
+      <p class="w3-large"> 
+        Combining body weight,
+        muscle strength and cardio movements synchronized with music that is specifically designed to fit each movement,
+        Strong Zumba is a great exercise to help you reach your weight loss goals faster, build muscle mass,
+        increase strength, and maintain a healthy heart.
+      </p>
+     
+    </div>
+  </div>
+</div>
+  <hr> 
+
+    <!-- sport2 -->
+    <div class="w3-row w3-padding-64" id="menu">
+      <div class="w3-col l6 w3-padding-large">
+        <h2 class="w3-center">WORKOUT</h2><br>
+        
+        <p class="w3-large" id="paragraphleft">It is a combination of resistance exercises and burning exercises,
+           which consists of different exercises using time for the body's endurance and improving physical fitness</p><br>    
+      </div>
+      
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <img src="{% static 'image/sport1.jpg' %}" class="w3-round w3-image w3-opacity-min" id="pictu" alt="Table Setting" width="600" height="750">
+       </div> 
+      <!-- <div class="w3-col l6 w3-padding-large">
+        <img src="{% static 'image/10.png' %}" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+      </div> -->
+    </div>
+
+    <!-- sport3 -->
+<div class="w3-content" style="max-width:1100px">
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="{% static 'image/sport4.jpg' %}" class="w3-round w3-image w3-opacity-min" id="pictu" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h2 class="w3-center">RPM </h2><br>
+      <p class="w3-large">
+        It is a group cycling exercise where you can control its intensity It is fun and low impact and you can burn up to 
+        600 calories in a session With the wonderful sound of music,
+         your coach takes you on a trip to climb hills and run fast and flat.  
+      
+      </p>
+     
+    </div>
+  </div>
+</div>
+
+
+    <!-- sport4 -->
+    <div class="w3-row w3-padding-64" id="menu">
+      <div class="w3-col l6 w3-padding-large">
+        <h2 class="w3-center">BODY SCULPT</h2><br>
+        <p class="w3-large" id="paragraphleft"> 
+          Or the so-called body sculpting, which is a set of exercises to tighten the muscles of the body using weights,
+           belts, bars, weights and various tools, which gives you strength with muscle tone and reduces bone loss </p><br>    
+      </div>
+      
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <img src="{% static 'image/sport5.jpg' %}" class="w3-round w3-image w3-opacity-min" id="pictu" alt="Table Setting" width="600" height="750">
+       </div> 
+      <!-- <div class="w3-col l6 w3-padding-large">
+        <img src="{% static 'image/10.png' %}" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+      </div> -->
+    </div>
+
+<!-- SECTION 2  -->
+<!-- sport5 -->
+<div class="w3-content" style="max-width:1100px">
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="{% static 'image/sport7.jpg' %}" class="w3-round w3-image w3-opacity-min" id="pictu" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h2 class="w3-center">BODY PUMP</h2><br>
+      <p class="w3-large"> 
+        It consists of a set of resistance exercises that exhaust muscles using light weights with high repetitions,
+         and it is the secret to developing skinny sports muscles, burning 560 calories within 50 minutes.
+          It also helps build lean muscles, which increases the body's ability to burn calories in the long run.
+      </p>
+     
+    </div>
+  </div>
+</div>
+  <hr> 
+
+    <!-- sport6 -->
+    <div class="w3-row w3-padding-64" id="menu">
+      <div class="w3-col l6 w3-padding-large">
+        <h2 class="w3-center">BODY COMBAT</h2><br>
+        
+        <p class="w3-large" id="paragraphleft">
+          Inspired by the art of fighting and self-defense,
+          it uses high energy from the body to improve fitness and burn calories up to 740 calories.
+          </p><br>    
+      </div>
+      
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <img src="{% static 'image/sport9.jpg' %}" class="w3-round w3-image w3-opacity-min" id="pictu" alt="Table Setting" width="600" height="750">
+       </div> 
+      <!-- <div class="w3-col l6 w3-padding-large">
+        <img src="{% static 'image/10.png' %}" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+      </div> -->
+    </div>
+
+    <!-- sport7 -->
+<div class="w3-content" style="max-width:1100px">
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="{% static 'image/sport10.jpg' %}" class="w3-round w3-image w3-opacity-min" id="pictu" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h2 class="w3-center">BODY RESISTANCE</h2><br>
+      <p class="w3-large">
+      The sport of body building or bodybuilding is the definition of the game of bodybuilding is
+       the use of resistance exercises using iron or exercises with an increasing and gradual body
+        weight to control and develop muscles for aesthetic purposes  
+      </p>
+     
+    </div>
+  </div>
+</div>
+
+
+    <!-- sport 8 -->
+    <div class="w3-row w3-padding-64" id="menu">
+      <div class="w3-col l6 w3-padding-large">
+        <h2 class="w3-center">ZUMBA</h2><br>
+        <p class="w3-large" id="paragraphleft"> 
+          It depends on the diversity and merging of many sports and dances such as salsa, samba and belly dance.
+            Zumba exercises achieve a faster loss of stored fat in the body for its ability to burn calories.
+        </p><br>    
+      </div>
+      
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <img src="{% static 'image/sport8.jpg' %}" class="w3-round w3-image w3-opacity-min" id="pictu" alt="Table Setting" width="600" height="750">
+       </div> 
+      <!-- <div class="w3-col l6 w3-padding-large">
+        <img src="{% static 'image/10.png' %}" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+      </div> -->
+    </div>
+
+
+    <!-- sport9 -->
+    <div class="w3-content" style="max-width:1100px">
+      <div class="w3-row w3-padding-64" id="about">
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+         <img src="{% static 'image/sport11.jpg' %}" class="w3-round w3-image w3-opacity-min" id="pictu" alt="Table Setting" width="600" height="750">
+        </div>
+    
+        <div class="w3-col m6 w3-padding-large">
+          <h2 class="w3-center">YOGA</h2><br>
+          <p class="w3-large">
+            It is a mind and body sport, a physical exercise that helps to communicate with oneself through breathing,
+             helps to increase flexibility,
+             and improves heart health.  It improves mood and helps reduce stress  
+          </p>
+         
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    
+    </section>
+  </body>
+
+</html>
+
+
+{% endblock %}
