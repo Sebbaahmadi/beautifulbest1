@@ -21,6 +21,5 @@ def contact(request):
             masseage = v_text)
         v_contact.save()
         return render(request, 'contact/contact.html')
-
     else:
         return render(request, 'contact/contact.html')

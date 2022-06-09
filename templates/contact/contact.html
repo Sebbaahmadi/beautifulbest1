@@ -99,22 +99,21 @@ h3{
     <div class="w3-col m6 w3-padding-large">
     <h1 class="w3-center">Contact us</h1><br>
     <h3>We will be more than happy to serve you</h3><br>
-    <form class="form" >
+    <form class="form" method="POST" action="{% url 'contact' %}">
+      {% csrf_token %}
       <!-- <div class="form-group"> -->
-          <label for="exampleFormControlInput1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">First Name</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="First name...">
+          <label for="exampleFormControlInput1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Name</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name..." name="firstname">
         <!-- </div> -->
         <!-- <div class="form-group"> -->
-          <label for="exampleFormControlInput1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Last Name</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Last Name...">
         <!-- </div>      -->
     <!-- <div class="form-group"> -->
       <label for="exampleFormControlInput1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Email Address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
     <!-- </div> -->
     <!-- <div class="form-group"> -->
       <label for="exampleFormControlSelect1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Do you have one of these problems?</label>
-      <select class="form-control" id="exampleFormControlSelect1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+      <select class="form-control" id="exampleFormControlSelect1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" name = "subject">
         <option>suggestions</option>
         <option>complaints</option>
         <option>cann't log in to your account</option>
@@ -123,7 +122,7 @@ h3{
   <!-- </div> -->
       <!-- <div class="form-group"> -->
           <label for="exampleFormControlTextarea1" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Write Your Problem</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Other problems"></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Other problems" name = "text"></textarea>
         <!-- </div> -->
         <div class="col-auto">
           <button type="submit" class="btn btn-light mt-3">Submit</button>
@@ -133,27 +132,7 @@ h3{
 </div>
 </div>
 
-<!-- Google Map -->
-<script src="{% static 'js/google-map.js' %}"></script>
-<script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB7V-mAjEzzmP6PCQda8To0ZW_o3UOCVCE&callback=initMap' %}" async defer></script>
 
-<script>
-$(document).ready(function(){
-$(window).resize(function(){
-  var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-  if (width >= '768') { 
-    var footerHeight = $('#footer').outerHeight();
-    $('#container').css({'marginBottom': footerHeight + 'px'});
-} else {
-    $('#container').css({'marginBottom': '0px'});
-}
-});
-$(window).resize();
-});
-</script>
-
-<script type="text/javascript" src="{% static 'js/validator.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/form-scripts.js' %}"></script>
 
 </div>
 
